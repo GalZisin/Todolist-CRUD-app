@@ -1,0 +1,22 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var authController_1 = require("../controllers/authController");
+var taskController_1 = require("../controllers/taskController");
+var auth_1 = __importDefault(require("../middleware/auth"));
+var router = express_1.Router();
+router.use(auth_1.default);
+router.route('/getMyTasks').get(taskController_1.getMyTasks);
+router.route('/getAllTasks').get(authController_1.restrictTo('admin'), taskController_1.getAllTasks);
+router.route('/createTask').post(taskController_1.createTask);
+router.route('/deleteTask/:Id').delete(authController_1.restrictTo('admin'), taskController_1.deleteTask);
+router.route('/updateTask/:Id').patch(authController_1.restrictTo('admin'), taskController_1.updateTask);
+router.route('/deleteMyTask/:Id').delete(taskController_1.deleteMyTask);
+router.route('/updateMyTask/:Id').patch(taskController_1.updateMyTask);
+// router.route('/').get(getTasks).post(createTask);
+// router.route('/:taskId').get(getTask).delete(deleteTask).put(updateTask);
+// export default router;
+exports.default = router;
