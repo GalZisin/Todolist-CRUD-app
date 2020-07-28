@@ -10,7 +10,7 @@ const Home = () => {
     <div>
       <h1 style={{ textAlign: 'center', color: 'black' }}>wellcome</h1>
       <h1 style={{ textAlign: 'center', color: 'black' }}>Please login as admin to view all user tasks</h1>
-      <h1 style={{ textAlign: 'center', color: 'black' }}>email: admin@gmail.com, password: admin</h1>
+      <h1 style={{ textAlign: 'center', color: 'black' }}>Email: admin@gmail.com, Password: admin</h1>
       <h1 style={{ textAlign: 'center', color: 'black' }}>Please register as user to view only users tasks</h1>
     </div>
   );
