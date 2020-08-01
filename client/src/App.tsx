@@ -3,7 +3,6 @@ import AppNavbar from './components/AppNavbar';
 import { Router, Switch, Route } from 'react-router-dom';
 import store from './flux/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 import { history } from './flux/history';
 import { PrivateAdminRoute } from './components/PrivateAdminRoute';
 import { PrivateUserRoute } from './components/PrivateUserRoute';
