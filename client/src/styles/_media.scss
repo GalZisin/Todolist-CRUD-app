@@ -15,9 +15,16 @@
         }
         & td {
             text-align: right;
+            justify-content: left;
+            float: right;
             padding-left: 50%;
             position: relative;
-            // background: green;
+        }
+        & .wrapText {
+            display: flex;
+            word-wrap: break-all;
+            padding-left: 45%;
+            text-align: left;
         }
         & td::before {
             content: attr(data-label);
@@ -28,11 +35,25 @@
             font-size: 15px;
             font-weight: bold;
             text-align: left;
+            word-wrap: break-all;
         }
     }
     .edit-btn {
         padding-right: 25px !important;
         padding-left: 25px !important;
+        margin-right: 115px !important;
+    }
+    .delete-btn {
+        margin-right: 115px !important;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 321px) {
+    .wrapText {
+        display: flex;
+        word-wrap: break-all;
+        padding-left: 45%;
+        text-align: left;
     }
 }
 
@@ -58,11 +79,17 @@
     .btn-cancel {
         margin: 0px 55px;
     }
+    .th-width {
+        width: 50px;
+    }
 }
 
 @media (max-width: 374px) and (min-width: 360px) {
     .btn-cancel {
         margin: 0px 50px;
+    }
+    .wrapText {
+        word-wrap: break-word;
     }
 }
 
