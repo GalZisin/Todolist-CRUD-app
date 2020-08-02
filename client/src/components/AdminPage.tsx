@@ -24,8 +24,8 @@ const AdminPage = ({ getAllTasks, task, deleteTask }: ITodoList) => {
   return (
     <table className="table">
       <thead>
-        <th>Task id</th>
-        <th>User id</th>
+        {/* <th>Task id</th>
+        <th>User id</th> */}
         <th>User</th>
         <th>Task create at</th>
         <th>Task Title</th>
@@ -37,12 +37,20 @@ const AdminPage = ({ getAllTasks, task, deleteTask }: ITodoList) => {
         {tasks &&
           tasks.map(({ _id, title, description, user, nameOfUser, createdAt }) => (
             <tr key={_id}>
-              <td data-label="Id">{_id}</td>
-              <td data-label="User">{user}</td>
-              <td data-label="Name Of User">{nameOfUser}</td>
-              <td data-label="Created At">{createdAt}</td>
-              <td data-label="Title">{title}</td>
-              <td data-label="Description">{description}</td>
+              {/* <td data-label="Id">{_id}</td>
+              <td data-label="User">{user}</td> */}
+              <td data-label="Name Of User" className="wrapText">
+                {nameOfUser}
+              </td>
+              <td data-label="Created At" className="wrapText">
+                {createdAt}
+              </td>
+              <td data-label="Title" className="wrapText">
+                {title}
+              </td>
+              <td data-label="Description" className="wrapText">
+                {description}
+              </td>
               <td data-label="Edit">
                 <Button className="edit-btn" variant="contained" color="primary" onClick={() => handleEdit(_id)}>
                   Edit

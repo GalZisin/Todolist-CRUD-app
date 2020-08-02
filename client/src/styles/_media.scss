@@ -1,4 +1,4 @@
-@media only screen and (max-width: 768px) and (min-width: 321px) {
+@media (max-width: 768px) and (min-width: 321px) {
     .table {
         & thead {
             display: none;
@@ -15,8 +15,6 @@
         }
         & td {
             text-align: right;
-            justify-content: left;
-            float: right;
             padding-left: 50%;
             position: relative;
         }
@@ -30,12 +28,11 @@
             content: attr(data-label);
             position: absolute;
             left: 0;
-            width: 45%;
+            width: 50%;
             padding-left: 15px;
             font-size: 15px;
             font-weight: bold;
             text-align: left;
-            word-wrap: break-all;
         }
     }
     .edit-btn {
@@ -48,14 +45,13 @@
     }
 }
 
-@media (max-width: 767px) and (min-width: 321px) {
-    .wrapText {
-        word-wrap: break-all;
-        padding-left: 30%;
-        text-align: left;
-    }
-}
-
+// @media (max-width: 767px) and (min-width: 321px) {
+//     // .wrapText {
+//     //     word-wrap: break-all;
+//     //     padding-left: 30%;
+//     //     text-align: left;
+//     // }
+// }
 @media (max-width: 767px) and (min-width: 450px) {
     .btn-cancel {
         margin: 0px 90px;
