@@ -129,13 +129,13 @@ const EditTask = (props: any) => {
 
                   <CardFooter className="p-4">
                     <Row>
-                      <Col xs="12" sm="6">
+                      <Col xs={{ size: 12 }} md={{ size: 9, offset: 0 }}>
                         <Button type="submit" className="btn btn-info mb-1" block>
                           <span>Save</span>
                         </Button>
                       </Col>
 
-                      <Col xs="12" sm="6">
+                      <Col className="btn-cancel" md={{ size: 3, offset: 0 }}>
                         {isAdmin ? adminLink : userLink}
                       </Col>
                     </Row>

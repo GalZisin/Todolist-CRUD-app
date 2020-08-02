@@ -29,7 +29,7 @@ const AddTaskModal = ({ isAuthenticated, addTask }: ITaskModal) => {
 
   return (
     <div>
-      <Button color="dark" style={{ marginBottom: '2rem' }} onClick={handleToggle}>
+      <Button color="dark" style={{ marginBottom: '2rem', marginLeft: 20 }} onClick={handleToggle}>
         Add Task
       </Button>
       <Modal isOpen={modal} toggle={handleToggle}>
