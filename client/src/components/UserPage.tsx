@@ -27,8 +27,8 @@ const UserPage = ({ getMyTasks, task, deleteMyTask }: ITodoList) => {
       <AddTaskModal />
       <table className="table">
         <thead>
-          <th className="th-width">Task id</th>
-          <th>User id</th>
+          {/* <th className="th-width">Task id</th>
+          <th>User id</th> */}
           <th>User</th>
           <th>Task create at</th>
           <th>Task Title</th>
@@ -40,13 +40,13 @@ const UserPage = ({ getMyTasks, task, deleteMyTask }: ITodoList) => {
           {tasks &&
             tasks.map(({ _id, title, description, user, nameOfUser, createdAt }) => (
               <tr key={_id}>
-                <td data-label="Id" style={{ overflowWrap: 'break-word' }}>
+                {/* <td data-label="Id" style={{ overflowWrap: 'break-word' }}>
                   {_id}
                 </td>
 
                 <td data-label="User" style={{ overflowWrap: 'break-word' }}>
                   {user}
-                </td>
+                </td> */}
                 <td data-label="Name Of User" className="wrapText">
                   {nameOfUser}
                 </td>

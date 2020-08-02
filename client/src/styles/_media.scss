@@ -21,10 +21,10 @@
             position: relative;
         }
         & .wrapText {
-            display: flex;
-            word-wrap: break-all;
             padding-left: 45%;
             text-align: left;
+            justify-content: center;
+            word-wrap: break-word;
         }
         & td::before {
             content: attr(data-label);
@@ -50,9 +50,8 @@
 
 @media (max-width: 767px) and (min-width: 321px) {
     .wrapText {
-        display: flex;
         word-wrap: break-all;
-        padding-left: 45%;
+        padding-left: 30%;
         text-align: left;
     }
 }
